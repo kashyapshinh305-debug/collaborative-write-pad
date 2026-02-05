@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REAL TIME BOARD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to real time white board</h1>
+    </div>
+
+    <div class="tooles">
+        <button onclick="changeColor('black')">black</button>
+        <button onclick="changeColor('blue')">blue</button>
+        <button onclick="changeColor('green')">green</button>
+        <button onclick="changeColor('red')">red</button>
+        <button onclick="changeColor('yellow')">yellow</button>
+        <button onclick="changeBrushSize(2)">thin</button>
+        <button onclick="changeBrushSize(5)">medium</button>
+        <button onclick="changeBrushSize(10)">thick</button>
+        <button onclick="clearCanvas()">clear all</button>
+        <button onclick="toggleEraser()">eraser</button>
+    </div>
+
+    <div id="status" class="conection-status">
+        connecting...
+    </div>
+
+    <canvas id="board"></canvas>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
